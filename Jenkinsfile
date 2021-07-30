@@ -8,7 +8,7 @@ pipeline {
       stage('Build') {
          steps {
             git 'https://github.com/techmomo/spring-cicd'
-            sh "mvn clean install -DskipTests=true"
+            sh "./mvnw clean install -DskipTests=true"
          }
       }
       stage('Docker'){
